@@ -1,6 +1,6 @@
 class RepositoriesController < ApplicationController
   def index
-    @service = GithubService.new
+    @service = GithubService.new(@access_token)
     @repos_array = @service.get_repos
   end
 

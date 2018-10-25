@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
     end
 
     def logged_in?
-      !!session[:token]
+      !!@access_token = access_hash["access_token"]
     end
 end
