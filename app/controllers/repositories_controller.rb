@@ -1,6 +1,10 @@
 class RepositoriesController < ApplicationController
   def index
+<<<<<<< HEAD
     @service = GithubService.new(@access_token)
+=======
+    @service = GithubService.new(session[:token])
+>>>>>>> 7ff09cfc9b06c915108a5b741a9a40c572953782
     @repos_array = @service.get_repos
   end
 
